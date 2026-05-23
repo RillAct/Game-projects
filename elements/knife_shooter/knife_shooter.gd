@@ -2,12 +2,13 @@ extends Node2D
 #пропишем откуда будем подгружать элементы для ножа
 var knife_scene := preload("res://elements/knife/knife.tscn")
 
+#подготовим элементы сцены для запуска
 @onready var knife := $Knife #Нож текущей сцены
 @onready var timer := $Timer #таймер текущей сцены
 
 # функция создания ножа
 func create_new_knife():
-	knife = knife_scene.instantiate() #создаём сцену с ножом
+	knife = knife_scene.instantiate() #подготовим сцену с ножом
 	add_child(knife) #добавляем созданную сцену с ножом
 
 #пропишем функцию для отсеживания нажатия на экран

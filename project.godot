@@ -30,6 +30,10 @@ window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
+[gui]
+
+theme/custom="uid://doyycoulaikyy"
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true

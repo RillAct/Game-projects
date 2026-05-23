@@ -42,10 +42,10 @@ func  throw_away(direction: Vector2):
 	
 #Функция для столкновения ножа с мишенью
 func handle_collision(collision: KinematicCollision2D):
-	var collider := collision.get_collider()
-	if collider is Target:
-		add_knife_to_target(collider)
-		#меняем состояние ножа если объект столкновения мишень
+	var collider := collision.get_collider() #получаем переменную со столкновением
+	if collider is Target: #проверяем класс переменной с колизией и если это мишень то исполняем
+		add_knife_to_target(collider) #добавляем ножи к мишени
+		#меняем состояние ножа если объект столкновения мишень на бездействие
 		change_state(State.IDLE)
 	else:
 		#иначе вызывает функцию для отскока ножей вызывая нормаль (вектор отклонения от объекта столкновения)
