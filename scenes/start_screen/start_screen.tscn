@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://i1rsefr3ylbm"]
+
+[ext_resource type="PackedScene" uid="uid://boyewcq0oc2xh" path="res://elements/ui/hud/hud.tscn" id="1_kxxag"]
+[ext_resource type="FontFile" uid="uid://bg4doica84toj" path="res://assets/font/MouseMemoirs-Regular.ttf" id="2_vc06n"]
+[ext_resource type="Texture2D" uid="uid://cso6wdxm7tlg8" path="res://assets/knife1.png" id="3_dn1by"]
+[ext_resource type="StyleBox" uid="uid://6gqa07wflgm8" path="res://style/button.stylebox" id="4_vc06n"]
+[ext_resource type="Texture2D" uid="uid://dl8yjyw3eu6tm" path="res://assets/gift-ico.png" id="5_u5wn7"]
+
+[node name="StartScreen" type="Control" unique_id=41630342]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HUD" parent="." unique_id=2072568441 instance=ExtResource("1_kxxag")]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=636707428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 150
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1454742665]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1436152423]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_fonts/font = ExtResource("2_vc06n")
+theme_override_font_sizes/font_size = 90
+text = " THROWING KNIFES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer" unique_id=295884787]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/CenterContainer" unique_id=1694146755]
+layout_mode = 2
+texture = ExtResource("3_dn1by")
+stretch_mode = 5
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer" unique_id=293035674]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer2" unique_id=1172780765]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.8745098, 0.2509804, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.9098039, 0.34117648, 0.8627451, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.36078432, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.23137255, 0.9490196, 1)
+theme_override_styles/normal = ExtResource("4_vc06n")
+theme_override_styles/normal_mirrored = ExtResource("4_vc06n")
+theme_override_styles/pressed = ExtResource("4_vc06n")
+theme_override_styles/pressed_mirrored = ExtResource("4_vc06n")
+theme_override_styles/focus = ExtResource("4_vc06n")
+text = "PLAY"
+
+[node name="CenterContainer3" type="CenterContainer" parent="MarginContainer/VBoxContainer" unique_id=886760353]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CenterContainer3" unique_id=1248794176]
+layout_mode = 2
+texture_normal = ExtResource("5_u5wn7")
+stretch_mode = 5
